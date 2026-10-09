@@ -1,7 +1,14 @@
-import numpy as np
-def calculate_matrix_mean(matrix: list[list[float]], mode: str) -> list[float]:
-	matrix = np.array(matrix)
-	if mode == 'row':
-		return np.mean(matrix, axis=1)
+import torch
+
+def calculate_matrix_mean(matrix, mode: str) -> torch.Tensor:
+    """
+    Calculate mean of a 2D matrix per row or per column using PyTorch.
+    Inputs can be Python lists, NumPy arrays, or torch Tensors.
+    Returns a 1-D tensor of means or raises ValueError on invalid mode.
+    """
+    a_t = torch.as_tensor(matrix, dtype=torch.float)
+    # Your implementation here
+    if mode == 'row':
+		return torch.mean(a_t, axis=1)
 	elif mode == 'column':
-		return np.mean(matrix, axis=0)
+		return torch.mean(a_t, axis=0)
