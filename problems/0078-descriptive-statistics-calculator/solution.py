@@ -1,27 +1,27 @@
-import numpy as np
+import torch
 
-def descriptive_statistics(data: list | np.ndarray) -> dict:
+def descriptive_statistics(data) -> dict:
     """
-    Calculate various descriptive statistics metrics for a given dataset.
+    Calculate various descriptive statistics metrics for a given dataset using PyTorch.
     
     Args:
-        data: List or numpy array of numerical values
+        data: List, torch.Tensor, or array-like of numerical values
     
     Returns:
         Dictionary containing mean, median, mode, variance, standard deviation,
         percentiles (25th, 50th, 75th), and interquartile range (IQR)
     """
     # Your code here
-    data = np.array(data)
-    data = np.sort(data)
-    mean = np.mean(data)
-    median = np.median(data)
-    vals, counts = np.unique(data, return_counts=True)
-    mode = vals[np.argmax(counts)]
-    var = np.var(data)
-    std = np.std(data)
-    p25 = np.percentile(data, 25)
-    p50 = np.percentile(data, 50)
-    p75 = np.percentile(data, 75)
+    data = torch.tensor(data)
+    data, _ = torch.sort(data)
+    mean = torch.mean(data)
+    median = torch.quantile(data, 0.5)
+    vals, counts = torch.unique(data, return_counts=True)
+    mode = vals[torch.argmax(counts)]
+    var = torch.var(data, unbiased=False)
+    std = torch.std(data, unbiased=False)
+    p25 = torch.quantile(data, 0.25)
+    p50 = torch.quantile(data, 0.5)
+    p75 = torch.quantile(data, 0.75)
     inter_range = p75 - p25
-    return {'mean': mean, 'median': median, 'mode': mode, 'variance': var, 'standard_deviation': std, '25th_percentile': p25, '50th_percentile': p50, '75th_percentile': p75, 'interquartile_range': inter_range}
+    return {'mean': mean.item(), 'median': median.item(), 'mode': mode.item(), 'variance': var.item(), 'standard_deviation': std.item(), '25th_percentile': p25.item(), '50th_percentile': p50.item(), '75th_percentile': p75.item(), 'interquartile_range': inter_range.item()}
