@@ -1,16 +1,17 @@
-import numpy as np
+import torch
+
 def dice_statistics(n: int) -> tuple[float, float]:
-	"""
-	Compute the expected value and variance of a fair n-sided die roll.
+    """
+    Compute the expected value and variance of a fair n-sided die roll using PyTorch.
 
-	Args:
-		n (int): Number of sides of the die
+    Args:
+        n (int): Number of sides of the die
 
-	Returns:
-		tuple: (expected_value, variance)
-	"""
-	# Your code here
-	space = np.arange(1, n + 1)
-	mean = np.mean(space)
-	var = np.var(space)
-	return (mean, var)
+    Returns:
+        tuple: (expected_value, variance)
+    """
+    # Your code here
+    space = torch.arange(1, n + 1, dtype=torch.float32)
+	mean = torch.mean(space)
+	var = torch.var(space, unbiased=False)
+	return (mean.item(), var.item())
