@@ -21,7 +21,8 @@ def matrix_rank(A: np.ndarray, tol: float = 1e-10) -> int:
             col += 1
             continue
         
-        A[pivot_row,:], A[max_row,:] = A[max_row,:].copy(), A[pivot_row,:].copy()
+        # A[pivot_row,:], A[max_row,:] = A[max_row,:].copy(), A[pivot_row,:].copy()
+        A[[pivot_row, max_row]] = A[[max_row, pivot_row]]
 
         for row in range(pivot_row + 1, m):
             factor = A[row, col] / A[pivot_row, col]
