@@ -1,20 +1,20 @@
-import numpy as np
+import torch
 
-def gaussian_elimination(A, b):
-	"""
-	Solves the system Ax = b using Gaussian Elimination with partial pivoting.
-    
-	:param A: Coefficient matrix
-	:param b: Right-hand side vector
-	:return: Solution vector x
-	"""
-	b = b.reshape(-1, 1)
-	aug = np.concatenate([A, b], axis=1)
-	aug.astype(float)
+def gaussian_elimination(A: torch.Tensor, b: torch.Tensor) -> torch.Tensor:
+    """
+    Solves the system Ax = b using Gaussian Elimination with partial pivoting.
+
+    :param A: Coefficient matrix (torch.Tensor)
+    :param b: Right-hand side vector (torch.Tensor)
+    :return: Solution vector x (torch.Tensor)
+    """
+    b = b.reshape(-1, 1)
+	aug = torch.concatenate([A, b], axis=1)
+	aug.to(torch.float32)
 	m, n = A.shape
 	pivot_row, col = 0, 0
 	while pivot_row < m and col < n:
-		max_row = pivot_row + np.argmax(aug[pivot_row:, col])
+		max_row = pivot_row + torch.argmax(aug[pivot_row:, col]).item()
 		if aug[max_row, col] == 0:
 			col += 1
 			continue
@@ -30,7 +30,7 @@ def gaussian_elimination(A, b):
 		pivot_row += 1
 		col += 1
 	
-	sol = np.zeros(m)
+	sol = torch.zeros(m)
 	for i in range(m - 1, -1, -1):
 		last = aug[i, -1]
 		for j in range(m - 1, i, -1):
