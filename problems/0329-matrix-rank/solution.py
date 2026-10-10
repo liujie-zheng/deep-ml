@@ -1,22 +1,22 @@
-import numpy as np
+import torch
 
-def matrix_rank(A: np.ndarray, tol: float = 1e-10) -> int:
+def matrix_rank(A: torch.Tensor, tol: float = 1e-10) -> int:
     """
     Compute the rank of a matrix.
     
     Args:
-        A: Input matrix of shape (m, n)
+        A: Input matrix of shape (m, n) as a torch.Tensor
         tol: Tolerance for considering values as zero
     
     Returns:
         The rank of the matrix (integer)
     """
     # Your code here
-    A = A.astype(float)
+    A = A.to(torch.float32)
     m, n = A.shape
     pivot_row, col = 0, 0
     while pivot_row < m and col < n:
-        max_row = pivot_row + np.argmax(np.abs(A[pivot_row:, col]))
+        max_row = pivot_row + torch.argmax(torch.abs(A[pivot_row:, col])).item()
         if abs(A[max_row, col]) <= tol:
             col += 1
             continue
