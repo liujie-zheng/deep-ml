@@ -16,14 +16,14 @@ def numerical_gradient_check(f, x, analytical_grad, epsilon=1e-7):
     # Your code here
     x = np.array(x)
     n = len(x)
-    numerical_grad = []
+    numerical_grad = np.zeros_like(x)
     for i in range(n):
         xp1, xp2 = x.copy(), x.copy()
         xp1[i] += epsilon
         xp2[i] -= epsilon
 
         g = (f(xp1) - f(xp2)) / (2 * epsilon)
-        numerical_grad.append(g)
+        numerical_grad[i] = g
 
     relative_error = np.linalg.norm(numerical_grad - analytical_grad) / (np.linalg.norm(analytical_grad) + np.linalg.norm(numerical_grad))
     return (numerical_grad, relative_error)

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T23:57:00.593Z",
+  "generated_at": "2026-10-12T23:58:39.666Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -633,7 +633,7 @@
       "url": "https://www.deep-ml.com/problems/313",
       "path": "problems/0313-numerical-gradient-checking",
       "first_solved_at": "2026-10-12T23:56:59.800Z",
-      "last_pushed_at": "2026-10-12T23:56:59.800Z",
+      "last_pushed_at": "2026-10-12T23:58:38.829Z",
       "language": "python",
       "lines": 29
     }
