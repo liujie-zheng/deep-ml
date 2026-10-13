@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T01:34:31.072Z",
+  "generated_at": "2026-10-13T01:38:39.425Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -647,6 +647,17 @@
       "path": "math/0020-bayes-theorem",
       "first_solved_at": "2026-10-13T01:34:30.378Z",
       "last_pushed_at": "2026-10-13T01:34:30.378Z"
+    },
+    "math:21": {
+      "kind": "math",
+      "id": "21",
+      "title": "Common Distributions I: Bernoulli, Binomial, Uniform",
+      "difficulty": "medium",
+      "category": "Probability and Statistics for Machine Learning",
+      "url": "https://www.deep-ml.com/math-problems/21",
+      "path": "math/0021-common-distributions-i-bernoulli-binomial-uniform",
+      "first_solved_at": "2026-10-13T01:38:38.847Z",
+      "last_pushed_at": "2026-10-13T01:38:38.847Z"
     }
   }
 }
