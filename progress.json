@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T02:04:35.246Z",
+  "generated_at": "2026-10-13T20:21:24.276Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -682,6 +682,17 @@
       "last_pushed_at": "2026-10-13T02:04:34.607Z",
       "language": "python",
       "lines": 21
+    },
+    "math:36": {
+      "kind": "math",
+      "id": "36",
+      "title": "Multivariate Gaussians",
+      "difficulty": "medium",
+      "category": "Probability and Statistics for Machine Learning",
+      "url": "https://www.deep-ml.com/math-problems/36",
+      "path": "math/0036-multivariate-gaussians",
+      "first_solved_at": "2026-10-13T20:21:22.969Z",
+      "last_pushed_at": "2026-10-13T20:21:22.969Z"
     }
   }
 }
