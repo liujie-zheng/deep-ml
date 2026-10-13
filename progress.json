@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T20:26:25.517Z",
+  "generated_at": "2026-10-13T20:31:14.704Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -704,6 +704,19 @@
       "path": "math/0023-law-of-large-numbers-and-central-limit-theorem",
       "first_solved_at": "2026-10-13T20:26:24.962Z",
       "last_pushed_at": "2026-10-13T20:26:24.962Z"
+    },
+    "problem:180": {
+      "kind": "problem",
+      "id": "180",
+      "title": "Conditional Probability from Joint Distribution",
+      "difficulty": "medium",
+      "category": "Probability",
+      "url": "https://www.deep-ml.com/problems/180",
+      "path": "problems/0180-conditional-probability-from-joint-distribution",
+      "first_solved_at": "2026-10-13T20:31:14.111Z",
+      "last_pushed_at": "2026-10-13T20:31:14.111Z",
+      "language": "python",
+      "lines": 14
     }
   }
 }
