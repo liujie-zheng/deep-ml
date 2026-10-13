@@ -2,7 +2,7 @@
 
 My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solution here was written by hand.
 
-**57** solved · 33 problems · 0 labs · 24 math
+**58** solved · 33 problems · 0 labs · 25 math
 
 ![Coverage](./coverage.svg)
 
@@ -64,6 +64,7 @@ My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solu
 | [Covariance and Correlation](https://www.deep-ml.com/math-problems/17) | medium | 2026-10-10 | [solution](math/0017-covariance-and-correlation) |
 | [Determinants and Trace](https://www.deep-ml.com/math-problems/11) | medium | 2026-10-09 | [solution](math/0011-determinants-and-trace) |
 | [Inverse and Rank](https://www.deep-ml.com/math-problems/12) | medium | 2026-10-09 | [solution](math/0012-inverse-and-rank) |
+| [Law of Large Numbers and Central Limit Theorem](https://www.deep-ml.com/math-problems/23) | medium | 2026-10-13 | [solution](math/0023-law-of-large-numbers-and-central-limit-theorem) |
 | [Least Squares and the Normal Equations](https://www.deep-ml.com/math-problems/34) | medium | 2026-10-10 | [solution](math/0034-least-squares-and-the-normal-equations) |
 | [Matrix Calculus Identities](https://www.deep-ml.com/math-problems/35) | medium | 2026-10-11 | [solution](math/0035-matrix-calculus-identities) |
 | [Matrix Multiplication](https://www.deep-ml.com/math-problems/10) | medium | 2026-09-26 | [solution](math/0010-matrix-multiplication) |
