@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-13T01:43:53.849Z",
+  "generated_at": "2026-10-13T02:04:35.246Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -669,6 +669,19 @@
       "path": "math/0022-common-distributions-ii-normal-poisson-exponential",
       "first_solved_at": "2026-10-13T01:43:53.138Z",
       "last_pushed_at": "2026-10-13T01:43:53.138Z"
+    },
+    "problem:168": {
+      "kind": "problem",
+      "id": "168",
+      "title": "Calculate Conditional Probability from Data",
+      "difficulty": "easy",
+      "category": "Probability",
+      "url": "https://www.deep-ml.com/problems/168",
+      "path": "problems/0168-calculate-conditional-probability-from-data",
+      "first_solved_at": "2026-10-13T02:04:34.607Z",
+      "last_pushed_at": "2026-10-13T02:04:34.607Z",
+      "language": "python",
+      "lines": 21
     }
   }
 }
