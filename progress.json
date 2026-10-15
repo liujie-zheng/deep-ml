@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-15T02:13:39.433Z",
+  "generated_at": "2026-10-15T02:24:01.747Z",
   "items": {
     "math:7": {
       "kind": "math",
@@ -998,6 +998,19 @@
       "last_pushed_at": "2026-10-15T02:13:35.009Z",
       "language": "python",
       "lines": 5
+    },
+    "problem:136": {
+      "kind": "problem",
+      "id": "136",
+      "title": "Calculate KL Divergence Between Two Multivariate Gaussian Distributions",
+      "difficulty": "medium",
+      "category": "Probability",
+      "url": "https://www.deep-ml.com/problems/136",
+      "path": "problems/0136-calculate-kl-divergence-between-two-multivariate-gaussian-distributions",
+      "first_solved_at": "2026-10-15T02:24:00.535Z",
+      "last_pushed_at": "2026-10-15T02:24:00.535Z",
+      "language": "python",
+      "lines": 30
     }
   }
 }
